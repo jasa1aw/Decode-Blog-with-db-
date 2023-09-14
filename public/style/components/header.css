@@ -1,0 +1,72 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    margin-bottom: 40px;
+}
+
+.logo .logoName{
+    font-size: 50px;
+    font-weight: 500;
+    color: #00A2DC;
+}
+
+.searchBlog{
+    display: flex;
+}
+.searchBlog input{
+    width: 300px;
+    height: 39px;
+    padding: 5px 10px;
+    border: 1px solid #E7E7E7;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #0000008A;
+}
+.searchBlog input:focus-visible{
+    outline: none;
+}
+
+.searchBlog .seacrhBtn, .fa-solid.fa-magnifying-glass{
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+}
+.searchBlog .seacrhBtn{
+    width: 91px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    background-color: #00A2DC;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+.searchBlog .fa-solid.fa-magnifying-glass{
+    margin-right: 5px;
+}
+
+.authorizationBlog{
+    display: flex;
+    align-items: center;
+}
+
+.authorizationBlog .registrationBtn, .authorizationBlog .logInBtn{
+    width: 125px;
+    height: 50px;
+    padding: 10px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #00A2DC;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.authorizationBlog .registrationBtn{
+    margin-right: 15px;
+}
