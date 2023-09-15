@@ -58,7 +58,7 @@
     width: 125px;
     height: 50px;
     padding: 10px;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-size: 14px;
     font-weight: 400;
     color: #fff;
@@ -67,6 +67,6 @@
     border-radius: 4px;
     cursor: pointer;
 }
-.authorizationBlog .registrationBtn{
+.authorizationBlog .logInBtn{
     margin-right: 15px;
 }

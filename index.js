@@ -10,6 +10,12 @@ app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
     res.render('main')
 })
+app.get('/login', (req, res) => {
+    res.render('logIn')
+})
+app.get('/registration', (req, res) => {
+    res.render('registration')
+})
 
 //Connect port
 const PORT = 3001;
