@@ -1,0 +1,102 @@
+.main{
+    display: flex;
+}
+
+/* cardBlock */
+.cardBlock{
+    padding: 20px 40px;
+}
+/* blockCardItem */
+.cardText{
+    text-align: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.cardText .cardTitle{
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.cardText .cardSubtitle{
+    width: 720px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* cardPost */
+.cardImg{
+    max-width: 760px;
+    max-height: 402px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 40px;
+}
+.cardImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.postDescription{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin: 0 auto;
+}
+.postDescription, .postOverview{
+    padding: 0 100px;
+}
+.postDescription .postTitle{
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.postDescription .postSubtitle{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+/* postOverview */
+.postOverview{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.postOverview i{
+    margin-right: 15px;
+    cursor: pointer;
+}
+.postDate, .postViews, .postComments, .postCategory, .postAuthor{
+    display: flex;
+    align-items: center;
+}
+
+
+/* categoryBlock */
+.categoryBlock{
+    max-height: 635px;
+    padding: 40px;
+    box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.25);
+}
+.categoryBlock .categoryTitle{
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.categoryList li{
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 1px solid #E7E7E7;
+    font-size: 16px;
+    font-style: 500px;
+    color: #007BFF;
+    cursor: pointer;
+}
+.categoryList li:last-child{
+    border-bottom: none;
+}
