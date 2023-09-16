@@ -10,6 +10,9 @@ app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
     res.render('main')
 })
+app.get('/profile', (req, res) => {
+    res.render('profile')
+})
 app.get('/login', (req, res) => {
     res.render('logIn')
 })
