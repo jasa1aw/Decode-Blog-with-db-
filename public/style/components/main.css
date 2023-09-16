@@ -1,9 +1,11 @@
 .main{
     display: flex;
+    gap: 20px;
 }
 
 /* cardBlock */
 .cardBlock{
+    width: 75%;
     padding: 20px 40px;
 }
 /* blockCardItem */
@@ -13,7 +15,6 @@
 }
 .cardText{
     text-align: center;
-    align-items: center;
     margin-bottom: 50px;
 }
 .cardText .cardTitle{
@@ -77,8 +78,9 @@
 
 /* categoryBlock */
 .categoryBlock{
-    max-height: 635px;
-    padding: 40px;
+    width: 25%;
+    height: max-content;
+    padding: 45px;
     box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.25);
 }
 .categoryBlock .categoryTitle{
