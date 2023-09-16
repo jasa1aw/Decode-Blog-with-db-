@@ -7,6 +7,10 @@
     padding: 20px 40px;
 }
 /* blockCardItem */
+.blockCardItem{
+    width: 80%;
+    margin: 0 auto;
+}
 .cardText{
     text-align: center;
     align-items: center;
@@ -18,20 +22,17 @@
     margin-bottom: 20px;
 }
 .cardText .cardSubtitle{
-    width: 720px;
-    margin: 0 auto;
     font-size: 20px;
     font-weight: 400;
 }
 
 /* cardPost */
 .cardImg{
-    max-width: 760px;
-    max-height: 402px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto 40px;
+    margin-bottom: 40px;
 }
 .cardImg img{
     width: 100%;
@@ -40,15 +41,12 @@
 }
 
 .postDescription{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     text-align: left;
-    margin: 0 auto;
 }
-.postDescription, .postOverview{
-    padding: 0 100px;
-}
+
 .postDescription .postTitle{
     font-size: 28px;
     font-weight: 400;
