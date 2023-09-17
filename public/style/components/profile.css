@@ -1,8 +1,23 @@
+/* Card Item */
 .profileCard{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+/* Card Description */
+.postHeader{
+    display: flex;
+    justify-content: space-between;
+}
+.postHeader .postMore, .fa-solid.fa-ellipsis-vertical{
+    cursor: pointer;
+}
+.postHeader .postMore{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Profile Block */
 .profileBlock{
     width: 25%;
     height: max-content;
