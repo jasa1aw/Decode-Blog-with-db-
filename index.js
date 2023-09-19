@@ -13,6 +13,9 @@ app.get('/', (req, res) => {
 app.get('/profile', (req, res) => {
     res.render('profile')
 })
+app.get('/profile-main', (req, res) => {
+    res.render('profileMain')
+})
 app.get('/login', (req, res) => {
     res.render('logIn')
 })

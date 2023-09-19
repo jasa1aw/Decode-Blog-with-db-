@@ -1,0 +1,35 @@
+/* commentary block */
+.commentary .countComment{
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.commentary .whoComment:not(:last-child){
+    border-bottom: 1px solid #E7E7E7;
+    margin-bottom: 20px;
+}
+.whoComment .whoUser{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.whoUser .userName{
+    font-size: 24px;
+    font-weight: 400;
+}
+.whoComment .comment{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.writeComment input{
+    width: 100%;
+    height: 80px;
+    padding: 0 10px;
+    border: 1px solid #E7E7E7;
+    margin-bottom: 15px;
+}
+.writeComment button{
+    padding: 12px 15px;
+}
