@@ -3,6 +3,7 @@
 @import url(components/header.css);
 @import url(components/profileHeader.css);
 @import url(components/main.css);
-@import url(components/profileMain.css);
+@import url(components/detailBlog.css);
 @import url(components/profile.css);
 @import url(components/logIn.css);
+@import url(components/newBlog.css);

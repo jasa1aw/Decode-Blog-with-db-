@@ -16,10 +16,18 @@
                     <div class="postDescription">
                         <div class="postHeader">
                             <h2 class="postTitle">Обзор Report Manager от Webix</h2>
-                            <span class="postMore">
-                                <i class="fa-solid fa-ellipsis-vertical" style="color: #757575;"></i>
-                                Еще
-                            </span>
+                            <div class="more-window">
+                                <span class="postMore" onclick="openEditMenu(this)">
+                                    <i class="fa-solid fa-ellipsis-vertical" style="color: #757575;"></i>
+                                    Еще
+                                </span>
+                                <div class="edit-window">
+                                    <a href="/editBlog">
+                                        <button class="edit-btn">Редактировать</button>
+                                    </a>
+                                    <button class="delete-btn">Удалить</button>
+                                </div>
+                            </div>
                         </div>
                         <p class="postSubtitle">
                             Осень 2020 года стала плодотворным временем для специалистов Webix. 
@@ -87,5 +95,6 @@
             </div>
         </div>
     </section>
+    <%- include('partials/scripts.ejs') %>
 </body>
 </html>

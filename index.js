@@ -13,8 +13,14 @@ app.get('/', (req, res) => {
 app.get('/profile', (req, res) => {
     res.render('profile')
 })
-app.get('/profile-main', (req, res) => {
-    res.render('profileMain')
+app.get('/detailBlog', (req, res) => {
+    res.render('detailBlog')
+})
+app.get('/newblog', (req, res) => {
+    res.render('newBlog')
+})
+app.get('/editblog', (req, res) => {
+    res.render('editBlog')
 })
 app.get('/login', (req, res) => {
     res.render('logIn')

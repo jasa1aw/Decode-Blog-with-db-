@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs') %>
+    <title>Edit Blog</title>
+</head>
+<body>
+    <%- include('partials/profileHeader.ejs') %>
+    <section class="newBlog">
+        <div class="newBlogContainer container">
+            <h1 class="titleNewBlog">Редактировать блог</h1>
+            <form class="formNewBlog" action="">
+                <input class="input" type="text" placeholder="Введите заголовок блога">
+                <select  name="" id="">
+                    <option selected>Выберите категорию</option>
+                    <option value="1">Прогнозы в IT</option>
+                    <option value="2">Веб-разработка</option>
+                    <option value="3">Мобильная разработка</option>
+                    <option value="4">Фриланс</option>
+                    <option value="5">Алгоритмы</option>
+                    <option value="6">Тестирование IT систем</option>
+                    <option value="7">Разработка игр</option>
+                    <option value="8">Дизайн и юзабилити</option>
+                    <option value="9">Искуственный интелект</option>
+                    <option value="10">Машинное обучение</option>
+                </select>
+                <button class="btnSelectAnImage button">Выберите картинку</button>
+                <textarea rows="8" placeholder="Введите описание блога"></textarea>
+                <button class="button" type="submit">Изменить</button>
+            </form>
+        </div>
+    </section>
+    <%- include('partials/scripts.ejs') %>
+</body>
+</html>

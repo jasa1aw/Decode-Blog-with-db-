@@ -9,20 +9,54 @@
     display: flex;
     justify-content: space-between;
 }
-.postHeader .postMore, .fa-solid.fa-ellipsis-vertical{
-    cursor: pointer;
+.more-window{
+    display: flex;
+    position: relative;
 }
 .postHeader .postMore{
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
     font-size: 16px;
     font-weight: 400;
 }
+.edit-window{
+    position: absolute;
+    top: 20px;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.10);
+}
+.edit-window .edit-btn, .delete-btn{
+    background-color: #fff;
+    border: none;
+    padding: 6px 28px 6px 12px;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+}
+.edit-window .delete-btn{
+    color: #FF0000;
+}
+.open-menu{
+    display: flex !important;
+}
+.postHeader .postMore, .fa-solid.fa-ellipsis-vertical{
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+
 
 /* Profile Block */
 .profileBlock{
     width: 25%;
     height: max-content;
     padding: 45px;
-    box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.10);
 }
 .profileDescription{
     width: 90%;
