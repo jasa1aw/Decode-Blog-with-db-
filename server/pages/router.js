@@ -13,11 +13,13 @@ router.get('/detailBlog', async(req, res) => {
     const allCategories = await Categories.find();
     res.render('detailBlog', {categories: allCategories});
 })
-router.get('/newblog', (req, res) => {
-    res.render('newBlog');
+router.get('/newblog', async(req, res) => {
+    const allCategories = await Categories.find();
+    res.render('newBlog', {categories: allCategories});
 })
-router.get('/editblog', (req, res) => {
-    res.render('editBlog');
+router.get('/editblog', async(req, res) => {
+    const allCategories = await Categories.find();
+    res.render('editBlog', {categories: allCategories});
 })
 router.get('/login', (req, res) => {
     res.render('logIn');

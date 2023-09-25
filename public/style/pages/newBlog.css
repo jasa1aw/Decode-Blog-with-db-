@@ -1,22 +1,19 @@
 
 .newBlog{
     height: 100vh;
-}
-
-.newBlogContainer{
     padding: 0px 60px;
     margin-top: 30px;
 }
-.newBlogContainer .titleNewBlog{
+.formNewBlog h2{
     font-size: 36px;
     font-weight: 500;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
-.formNewBlog input, select, textarea{
+.formNewBlog input, select, textarea {
     width: 50%;
     display: block;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 20px;
     border: 1px solid #E7E7E7;
     border-radius: 4px;
@@ -24,6 +21,7 @@
     font-size: 16px;
     font-weight: 400;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 .formNewBlog button{

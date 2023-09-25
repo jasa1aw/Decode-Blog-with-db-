@@ -7,28 +7,25 @@
 <body>
     <%- include('partials/profileHeader.ejs') %>
     <section class="newBlog">
-        <div class="newBlogContainer container">
-            <h1 class="titleNewBlog">Новый блог</h1>
-            <form class="formNewBlog" action="">
+        <form class="formNewBlog" action="">
+            <h2>Новый блог</h2>
+            <fieldset class="fieldset">
                 <input class="input" type="text" placeholder="Введите заголовок блога">
+            </fieldset>
+            <fieldset class="fieldset">
                 <select  name="" id="">
                     <option selected>Выберите категорию</option>
-                    <option value="1">Прогнозы в IT</option>
-                    <option value="2">Веб-разработка</option>
-                    <option value="3">Мобильная разработка</option>
-                    <option value="4">Фриланс</option>
-                    <option value="5">Алгоритмы</option>
-                    <option value="6">Тестирование IT систем</option>
-                    <option value="7">Разработка игр</option>
-                    <option value="8">Дизайн и юзабилити</option>
-                    <option value="9">Искуственный интелект</option>
-                    <option value="10">Машинное обучение</option>
+                    <% categories.forEach(category => { %>
+                        <option value=""><%= category.name %></option>
+                    <%})%>
                 </select>
+            </fieldset>
                 <button class="btnSelectAnImage button">Выберите картинку</button>
+            <fieldset class="fieldset">
                 <textarea rows="8" placeholder="Введите описание блога"></textarea>
+            </fieldset>
                 <button class="button" type="submit" >Создать</button>
-            </form>
-        </div>
+        </form>
     </section>
     <%- include('partials/scripts.ejs') %>
 </body>

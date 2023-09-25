@@ -3,6 +3,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 30px;
+}
+.profileCard button{
+    padding: 15px;
 }
 /* Card Description */
 .postHeader{
