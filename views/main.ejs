@@ -64,18 +64,9 @@
         <div class="categoryBlock">
             <h2 class="categoryTitle">Категории</h2>
             <div class="categoryList">
-                <ol>
-                    <li>Прогнозы в IT</li>
-                    <li>Веб-разработка</li>
-                    <li>Мобильная разработка</li> 
-                    <li>Фриланс</li>
-                    <li>Алгоритмы</li>
-                    <li>Тестирование IT систем</li>
-                    <li>Разработка игр</li>
-                    <li>Дизайн и юзабилити</li>
-                    <li>Искуственный интелект</li>
-                    <li>Машинное обучение</li>
-                </ol>
+                <% categories.forEach(category => { %>
+                    <a href="/<%= category.key %>"><%= category.name %></a>
+                <%})%>
             </div>
         </div>
     </section>
