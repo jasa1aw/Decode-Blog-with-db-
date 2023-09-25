@@ -1,0 +1,37 @@
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 150px;
+    align-items: center;
+}
+.form h2{
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.form .fieldset{
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.fieldset input{
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #E7E7E7 !important;
+    outline: none;
+    box-sizing: border-box;
+}
+.fieldset button{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

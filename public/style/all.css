@@ -1,9 +1,9 @@
 @import url(vendor/reset.css);
 @import url(vendor/same.css);
 @import url(components/header.css);
-@import url(pages/profileHeader.css);
+@import url(components/profileHeader.css);
+@import url(components/form.css);
 @import url(pages/main.css);
 @import url(pages/detailBlog.css);
 @import url(pages/profile.css);
-@import url(pages/logIn.css);
 @import url(pages/newBlog.css);

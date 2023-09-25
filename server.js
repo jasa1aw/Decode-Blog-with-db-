@@ -11,11 +11,12 @@ app.use(express.urlencoded());
 app.set("view engine", "ejs");
 
 //Router
-app.use(require('./server/pages/router'))
-app.use(require('./server/Categories/router'))
+app.use(require('./server/pages/router'));
+app.use(require('./server/Categories/router'));
+app.use(require('./server/auth/router'));
 
 //Connect port
 const PORT = 3001;
 app.listen(PORT, () => {
     console.log(`Sever work on port ${PORT}`);
-})
+});

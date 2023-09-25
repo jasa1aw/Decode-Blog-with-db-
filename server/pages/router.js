@@ -22,7 +22,7 @@ router.get('/editblog', (req, res) => {
 router.get('/login', (req, res) => {
     res.render('logIn');
 })
-router.get('/registration', (req, res) => {
+router.get('/register', (req, res) => {
     res.render('register');
 })
 module.exports = router;
