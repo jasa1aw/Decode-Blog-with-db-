@@ -11,6 +11,7 @@
     cursor: pointer;
 }
 .button{
+    padding: 15px;
     color: #fff;
     background-color: #00A2DC;
 }

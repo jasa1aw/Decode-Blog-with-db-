@@ -64,6 +64,10 @@
 }
 .profileDescription{
     width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
 }
 
@@ -78,19 +82,20 @@
     height: 100%;
     border-radius: 100%;
     object-fit: cover;
+    margin: 0 auto;
 }
 
-.profileDescription .userName, .userDescribe, .countUserPost{
+.profileDescription h2, p, .countUserPost{
     font-size: 16px;
     display: flex;
     justify-content: center;
     text-align: center;
     margin-bottom: 30px;
 }
-.profileDescription .userName{
+.profileDescription h2{
     font-weight: 500;
 }
-.profileDescription .userDescribe, .countUserPost{
+.profileDescription p, .countUserPost{
     font-weight: 400;
 }
 .profileDescription .editBtn{
