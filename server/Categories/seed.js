@@ -22,5 +22,6 @@ async function writeDataCategories(){
             }).save()
         })
     }
-}
-module.exports = writeDataCategories
+};
+
+module.exports = writeDataCategories;
