@@ -85,7 +85,7 @@
     margin: 0 auto;
 }
 
-.profileDescription h2, p, .countUserPost{
+.profileDescription h2, .profileDescription p, .profileDescription .countUserPost{
     font-size: 16px;
     display: flex;
     justify-content: center;
@@ -95,9 +95,12 @@
 .profileDescription h2{
     font-weight: 500;
 }
-.profileDescription p, .countUserPost{
+.profileDescription p, .profileDescription .countUserPost{
     font-weight: 400;
 }
 .profileDescription .editBtn{
-    margin: 0 auto;
+    margin: 0 auto 20px;
+}
+.profileDescription .logOutBtn{
+    background-color: #FF0000;
 }

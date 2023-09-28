@@ -5,7 +5,7 @@
     <title>Profile</title>
 </head>
 <body>
-    <%- include('partials/profileHeader.ejs') %>
+    <%- include('partials/header.ejs') %>
     <section class="main container">
         <div class="cardBlock">
             <div class="blockCardItem">
@@ -27,7 +27,7 @@
                                     Еще
                                 </span>
                                 <div class="edit-window">
-                                    <a href="/editBlog">
+                                    <a href="/edit">
                                         <button class="edit-btn">Редактировать</button>
                                     </a>
                                     <button class="delete-btn">Удалить</button>
@@ -77,10 +77,11 @@
                 <div class="profileBlockImg">
                     <img src="/img/avatarBig.png" alt="UserImg">
                 </div>
-                <h2>Елнур Сеитжанов</h2>
+                <h2><%= user.full_name %></h2>
                 <p>В основном пишу про веб - разработку, на React & Redux</p>
                 <span class="countUserPost">285 постов за все время</span>
-                <button class="editBtn button">Редактировать</button>
+                <a href="/edit"><button class="editBtn button">Редактировать</button></a>
+                <a href="/api/logout"><button class="logOutBtn button">Выйти из аккаунта</button></a>
             </div>
         </div>
     </section>

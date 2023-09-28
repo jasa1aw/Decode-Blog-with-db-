@@ -7,13 +7,13 @@
 <body>
     <%- include('partials/header.ejs') %>
     <section class="logInBlog">
-        <form action="" class="form">
+        <form action="/api/signin" method="post"  class="form">
             <h2 class="logInTitle">Вход</h2>
             <fieldset class="fieldset">
                 <input class="input" type="text" placeholder="Введите email" name="email">
             </fieldset>
             <fieldset class="fieldset">
-                <input class="input" type="password" placeholder="Введите пароль" name:"password">
+                <input class="input" type="password" placeholder="Введите пароль" name="password">
             </fieldset>
             <fieldset class="fieldset">
                 <button type="submit" class="button">Войти</button>

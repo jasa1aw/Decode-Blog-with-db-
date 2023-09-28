@@ -32,7 +32,6 @@
 }
 .searchBlog .seacrhBtn{
     width: 91px;
-    /* height: 50px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,4 +58,17 @@
 }
 .authBlog .logInBtn{
     margin-right: 15px;
+}
+
+.profileBlog{
+    width: 70px;
+    height: 70px;
+    background-color: transparent;
+    border-radius: 100%;
+}
+.profileBlog img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    object-fit: cover;
 }
