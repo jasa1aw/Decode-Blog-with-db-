@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Categories = require('../Categories/Categories');
+const NewBlog = require('../NewBlog/NewBlog')
 
 router.get('/', async(req, res) => {
     const allCategories = await Categories.find();
@@ -9,17 +10,19 @@ router.get('/', async(req, res) => {
 router.get('/profile/:id', (req, res) => {
     res.render('profile', {user: req.user ? req.user : {}})
 })
-router.get('/detailBlog', async(req, res) => {
+router.get('/detailBlog/:id', async(req, res) => {
     const allCategories = await Categories.find();
-    res.render('detailBlog', {categories: allCategories, user: req.user ? req.user : {}});
+    const createBlog = await NewBlog.find();
+    res.render('detailBlog', {categories: allCategories, newBlogs: createBlog, user: req.user ? req.user : {}});
 })
 router.get('/newblog', async(req, res) => {
     const allCategories = await Categories.find();
     res.render('newBlog', {categories: allCategories, user: req.user ? req.user : {}});
 })
-router.get('/edit', async(req, res) => {
+router.get('/edit/:id', async(req, res) => {
     const allCategories = await Categories.find();
-    res.render('editBlog', {categories: allCategories, user: req.user ? req.user : {}});
+    const createBlog = await NewBlog.find();
+    res.render('editBlog', {categories: allCategories, newBlogs: createBlog,user: req.user ? req.user : {}});
 })
 router.get('/login', (req, res) => {
     res.render('logIn', {user: req.user ? req.user : {}});

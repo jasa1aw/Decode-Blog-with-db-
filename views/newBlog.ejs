@@ -7,10 +7,10 @@
 <body>
     <%- include('partials/header.ejs') %>
     <section class="newBlog">
-        <form class="formNewBlog" action="">
+        <form class="formNewBlog" action="/api/newBlog" method="post">
             <h2>Новый блог</h2>
             <fieldset class="fieldset">
-                <input class="input" type="text" placeholder="Введите заголовок блога">
+                <input class="input" type="text" placeholder="Введите заголовок блога" required name="title">
             </fieldset>
             <fieldset class="fieldset">
                 <select  name="" id="">
@@ -22,7 +22,7 @@
             </fieldset>
                 <button class="btnSelectAnImage button">Выберите картинку</button>
             <fieldset class="fieldset">
-                <textarea rows="8" placeholder="Введите описание блога"></textarea>
+                <textarea rows="8" placeholder="Введите описание блога" required name="description"></textarea>
             </fieldset>
                 <button class="button" type="submit" >Создать</button>
         </form>
