@@ -17,9 +17,10 @@
                     <div class="cardImg">
                         <img src="/img/cardimage.svg" alt="">
                     </div>
+                    <% blog.forEach(blog =>{%>
                     <div class="postDescription">
                         <div class="postHeader">
-                            <h2>Обзор Report Manager от Webix</h2>
+                            <h2><%= blog.title %></h2>
                             
                             <div class="more-window">
                                 <span class="postMore" onclick="openEditMenu(this)">
@@ -35,9 +36,9 @@
                             </div>
                         </div>
                         <p>
-                            Осень 2020 года стала плодотворным временем для специалистов Webix. 
+                            <%= blog.description %> 
                         </p>
-                        <p>
+                        <!-- <p>
                             Команда Webix выпустила восьмую версию библиотеки пользовательского интерфейса Webix с 
                             двумя новыми комплексными виджетами. Первый - зто Scheduler, о котором мы подробно говорили ранее. 
                             Второй виджет - это Gantt chart в JavaScript. Подробную информацию об этом виджете Вы можете найти в статье. 
@@ -45,8 +46,9 @@
                         <p>
                             Ноябрь продолжает тенденцию, и мы спешим поделиться с Вами новым комплексным виджетом Report Manager. 
                             Давайте рассмотрим его подробнее.
-                        </p>
+                        </p> -->
                     </div>
+                    <%})%>
                     <div class="postOverview">
                         <div class="postDate">
                             <i class="fa-regular fa-calendar" style="color: #676767;"></i>

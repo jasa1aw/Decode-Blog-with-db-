@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const {editBlog} = require('./controller');
+const {createBlog} = require('./controller')
 
-router.post('/api/editBlog', editBlog);
+router.post('/api/newBlog', createBlog);
 
 module.exports = router;

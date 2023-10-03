@@ -32,8 +32,7 @@ app.set("view engine", "ejs");
 app.use(require('./server/pages/router'));
 app.use(require('./server/Categories/router'));
 app.use(require('./server/auth/router'));
-app.use(require('./server/NewBlog/router'));
-app.use(require('./server/EditBlog/router'));
+app.use(require('./server/Blog/router'));
 
 //Connect port
 const PORT = 3001;

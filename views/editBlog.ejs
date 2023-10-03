@@ -7,11 +7,10 @@
 <body>
     <%- include('partials/header.ejs') %>
     <section class="newBlog">
-        <% newBlogs.forEach(newBlog => { %>
-        <form class="formNewBlog" action="/api/editBlog">
+        <form class="formNewBlog" action="">
             <h2>Редактировать блог</h2>
             <fieldset class="fieldset">
-                <input class="input" type="text" value="<%=newBlog.title%>" required name="title" >
+                <input class="input" type="text" placeholder="Введите заголовок блога">
             </fieldset>
             <fieldset class="fieldset">
                 <select  name="" id="">
@@ -23,11 +22,10 @@
             </fieldset>
                 <button class="btnSelectAnImage button">Выберите картинку</button>
             <fieldset class="fieldset">
-                <textarea rows="8" value="<%= newBlog.description %>" required name="description"></textarea>
+                <textarea rows="8" placeholder="Введите описание блога"></textarea>
             </fieldset>
                 <button class="button" type="submit" >Изменить</button>
         </form>
-        <%})%>
     </section>
     <%- include('partials/scripts.ejs') %>
 </body>
