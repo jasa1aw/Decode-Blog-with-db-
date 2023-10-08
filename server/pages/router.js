@@ -8,8 +8,8 @@ router.get('/', async(req, res) => {
     res.render('main', {categories: allCategories, user: req.user ? req.user : {}});
 })
 router.get('/profile/:id', async(req, res) => {
-    const blog = await Blog.find();
-    res.render('profile', { blog: blog, user: req.user ? req.user : {}})
+    const blogs = await Blog.find();
+    res.render('profile', { blogs: blogs, user: req.user ? req.user : {}})
 })
 router.get('/detailBlog/:id', async(req, res) => {
     const allCategories = await Categories.find();

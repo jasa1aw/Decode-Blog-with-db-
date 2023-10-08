@@ -27,8 +27,18 @@
 .formNewBlog button{
     padding: 10px 15px;
 }
+.formNewBlog input[type="file"]{
+    /* display: none; */
+}
 .btnSelectAnImage{
+    /* display: block; */
+    /* position: relative; */
+    /* width: fit-content; */
     background-color: #FFF72F;
     color: #000;
     margin-bottom: 20px;
+    /* font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 400; */
 }
+

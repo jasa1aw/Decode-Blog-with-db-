@@ -12,7 +12,7 @@ require('./server/config/db')
 require('./server/config/passport')
 
 //Configuration
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded());
 app.use(session({
     name: 'decodeBlog.session',
