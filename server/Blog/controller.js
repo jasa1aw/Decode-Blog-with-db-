@@ -1,9 +1,9 @@
 const Blog = require('./Blog');
 
 const createBlog = async(req, res) =>{
-    console.log(req.body);
+    // console.log(req.body);
     if(req.body.title.length != 0){
-        new Blog({
+        await new Blog({
             title: req.body.title,
             description: req.body.description,
             image: `/img/blogs/${req.file.filename}`,
@@ -12,7 +12,15 @@ const createBlog = async(req, res) =>{
         }).save()
         res.redirect(`/profile/${req.user._id}`)
     }else{
-        res.redirect('/newblog?error=1');
+        res.redirect('/new?error=1');
     }
 }
-module.exports = {createBlog};
+
+const editBlog = async(req, res) =>{
+    console.log(req.params);
+    if(req.body.title.length != 0){
+    }else{
+        res.redirect(`/edit/${req.params.id}?/error=1`)
+    }
+}
+module.exports = {createBlog, editBlog};

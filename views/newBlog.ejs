@@ -7,16 +7,16 @@
 <body>
     <%- include('partials/header.ejs') %>
     <section class="newBlog">
-        <form class="formNewBlog" action="/api/newBlog" method="post" enctype="multipart/form-data">
+        <form class="formNewBlog" action="/api/new" method="post" enctype="multipart/form-data">
             <h2>Новый блог</h2>
             <fieldset class="fieldset">
                 <input class="input" type="text" placeholder="Введите заголовок блога" name="title">
             </fieldset>
             <fieldset class="fieldset">
-                <select  name="category id="">
+                <select  name="category">
                     <option selected>Выберите категорию</option>
                     <% categories.forEach(category => { %>
-                        <option value=<%= category._id %>><%= category.name %></option>
+                        <option value="<%= category._id %>"><%= category.name %></option>
                     <%})%>
                 </select>
             </fieldset>
