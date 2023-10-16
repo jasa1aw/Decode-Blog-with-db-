@@ -1,6 +1,6 @@
 function openEditMenu(triggerElement) {
     // Find the closest parent with class "card" (if any)
-    let card = triggerElement.closest('.blockCardItem');
+    let card = triggerElement.closest('.cardPost');
 
     // Check if the trigger element is inside a card
     if (card) {
@@ -10,7 +10,7 @@ function openEditMenu(triggerElement) {
     } else {
         // This is not a card on the second page
         let editWindows = document.getElementsByClassName('edit-window');
-
+        console.log(editWindows);
         for (let i = 0; i < editWindows.length; i++) {
             editWindows[i].classList.toggle('open-menu');
         }

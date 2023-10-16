@@ -18,9 +18,11 @@
                 blogs.forEach(blog =>{
                     %>
                 <div class="cardPost blockContainer">
-                    <div class="cardImg">
-                        <img src="<%= blog.image %>" alt="">
-                    </div>
+                    <% if(blog.image){ %>
+                        <div class="cardImg">
+                            <img src="<%= blog.image %>" alt="">
+                        </div>
+                    <% } %>
                     
                     <div class="postDescription">
                         <div class="postHeader">
@@ -32,10 +34,12 @@
                                     Еще
                                 </span>
                                 <div class="edit-window">
-                                    <a href="/edit/<%= blog.id %>">
-                                        <button class="edit-btn">Редактировать</button>
+                                    <a href="/edit/<%= blog.id %>" class="edit-btn">
+                                        Редактировать
                                     </a>
-                                    <button class="delete-btn">Удалить</button>
+                                    <a onclick="deleteFilms('<%= blog._id %>', '<%= blog.author._id %>')">
+                                        <button class="delete-btn">Удалить</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -55,10 +59,12 @@
                                 <i class="fa-solid fa-comment" style="color: #676767;"></i>
                                 <span class="comments">4</span>
                             </div>
-                            <div class="postCategory">
-                                <i class="fa-solid fa-comments" style="color: #676767;"></i>
-                                <span class="category"><%= blog.category.name %></span>
-                            </div>
+                            <% if(blog.category){ %>
+                                <div class="postCategory">
+                                    <i class="fa-solid fa-comments" style="color: #676767;"></i>
+                                    <span class="category"><%= blog.category.name %></span>
+                                </div>
+                            <% } %>
                             <div class="postAuthor">
                                 <i class="fa-solid fa-user" style="color: #676767;"></i>
                                 <span class="author"><%= user.full_name %></span>

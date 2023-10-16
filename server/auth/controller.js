@@ -12,6 +12,9 @@ const signUp = async(req, res) =>{
             const findUser = await User.findOne({email: req.body.email}).count()
             console.log(findUser);
             if(findUser){
+
+
+                
                 res.redirect('/register?error=3');
             }else if(req.body.password !== req.body.re_password){
                 res.redirect('/register?error=2');

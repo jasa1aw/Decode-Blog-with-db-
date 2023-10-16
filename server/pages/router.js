@@ -5,12 +5,13 @@ const Blog = require('../Blog/Blog')
 
 router.get('/', async(req, res) => {
     const allCategories = await Categories.find();
-    res.render('main', {categories: allCategories, user: req.user ? req.user : {}});
+    const blogs = await Blog.find().sort({_id: -1}).populate('category').populate('author')
+    res.render('main', {categories: allCategories, blogs, user: req.user ? req.user : {}});
 })
 router.get('/profile/:id', async(req, res) => {
-    const blogs = await Blog.find().populate('category').populate('author')
+    const blogs = await Blog.find().sort({_id: -1}).populate('category').populate('author')
     console.log(blogs);
-    res.render('profile', { blogs, user: req.user ? req.user : {}})
+    res.render('profile', {blogs, user: req.user ? req.user : {}})
 })
 router.get('/detailBlog/:id', async(req, res) => {
     const allCategories = await Categories.find();
