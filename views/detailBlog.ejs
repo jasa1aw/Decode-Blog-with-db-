@@ -10,12 +10,38 @@
         <div class="cardBlock">
             <div class="blockCardItem">
                 <div class="cardPost blockContainer">
-                    <div class="cardImg">
-                        <img src="/img/cardimage.svg" alt="">
+                    <% if(blog.image){ %>
+                        <div class="cardImg">
+                            <img src="<%= blog.image %>" alt="">
+                        </div>
+                    <% } %>
+                    <div class="postOverview">
+                        <div class="postDate">
+                            <i class="fa-regular fa-calendar" style="color: #676767;"></i>
+                            <span class="date">26.06.2020</span>
+                        </div>
+                        <div class="postViews">
+                            <i class="fa-solid fa-eye" style="color: #676767;"></i>
+                            <span class="views">21</span>
+                        </div>
+                        <div class="postComments">
+                            <i class="fa-solid fa-comment" style="color: #676767;"></i>
+                            <span class="comments">4</span>
+                        </div>
+                        <% if(blog.category){ %>
+                            <div class="postCategory">
+                                <i class="fa-solid fa-comments" style="color: #676767;"></i>
+                                <span class="category"><%= blog.category.name %></span>
+                            </div>
+                        <% } %>
+                        <div class="postAuthor">
+                            <i class="fa-solid fa-user" style="color: #676767;"></i>
+                            <span class="author"><%= blog.author.full_name %></span>
+                        </div>
                     </div>
                     <div class="postDescription">
                             <div class="postHeader">
-                                <h2>Обзор Report Manager от Webix</h2>
+                                <h2><%=blog.title%></h2>
                                 <div class="more-window">
                                     <span class="postMore" onclick="openEditMenu(this)">
                                         <i class="fa-solid fa-ellipsis-vertical" style="color: #757575;"></i>
@@ -30,9 +56,9 @@
                                 </div>
                             </div>
                             <p>
-                                Осень 2020 года стала плодотворным временем для специалистов Webix. 
+                                <%= blog.description %> 
                             </p>
-                            <p>
+                            <!-- <p>
                                 Команда Webix выпустила восьмую версию библиотеки пользовательского интерфейса Webix с 
                                 двумя новыми комплексными виджетами. Первый - зто Scheduler, о котором мы подробно говорили ранее. 
                                 Второй виджет - это Gantt chart в JavaScript. Подробную информацию об этом виджете Вы можете найти в статье. 
@@ -40,9 +66,9 @@
                             <p>
                                 Ноябрь продолжает тенденцию, и мы спешим поделиться с Вами новым комплексным виджетом Report Manager. 
                                 Давайте рассмотрим его подробнее.
-                            </p>
+                            </p> -->
                         </div>
-                    <div class="postMoreDescription">
+                    <!-- <div class="postMoreDescription">
                         <h2>Что такое комплексные виджеты Webix?</h2>
                         <p>
                             В отличие от обычных виджетов пользовательского интерфейса JavaScript, 
@@ -57,7 +83,7 @@
                             Гибкая архитектура Webix позволяет легко настраивать эти приложения, 
                             расширять их функциональность и интегрировать в существующие решения.
                         </p>
-                    </div>
+                    </div> -->
                     <div class="commentary">
                         <h2 class="countComment">2 комментария</h2>
                         <div class="whoComment">
@@ -69,10 +95,16 @@
                                 комплексные виджеты - это полноценные приложения, которые не требуют дополнительной настройки и кастомизации.
                             </p>
                         </div>
-                        <form action="" class="writeComment">
-                            <input class="input" type="text" placeholder="Введит текст комментария">
-                            <button type="submit" class="button">Отправить</button>
-                        </form>
+                        <% if((user._id && user.full_name.length > 0)){ %>
+                            <form action="" class="writeComment">
+                                <input class="input" type="text" placeholder="Введит текст комментария">
+                                <button type="submit" class="button">Отправить</button>
+                            </form>
+                        <% }else{ %>
+                            <div class="notComment">
+                                <p>Чтобы оставить комментарий <a href="/register">зарегистрируйтесь</a>, или <a href="/login">войдите</a> в аккаунт.</p>
+                            </div>
+                        <% } %>
                     </div> 
                 </div>
             </div>

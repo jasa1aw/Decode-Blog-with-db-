@@ -33,3 +33,7 @@
 .writeComment button{
     padding: 12px 15px;
 }
+.notComment{
+    background-color: #FFF3CD;
+    padding: 15px;
+}

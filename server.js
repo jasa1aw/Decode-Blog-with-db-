@@ -35,7 +35,7 @@ app.use(require('./server/auth/router'));
 app.use(require('./server/Blog/router'));
 
 //Connect port
-const PORT = 3001;
+const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Sever work on port ${PORT}`);
 });
