@@ -10,16 +10,15 @@ router.get('/', async(req, res) => {
     if(categories){
         options.category = categories._id
     }
-    // let page = 0;
-    // const limit = 4;
-    // if(req.query.page && req.query.page > 0){
-    //     page = req.query.page
-    // }
-    // const totalBlogs = await Blog.count()
+    let page = 0;
+    const limit = 4;
+    if(req.query.page && req.query.page > 0){
+        page = req.query.page
+    }
+    const totalBlogs = await Blog.count()
     const allCategories = await Categories.find();
-    const blogs = await Blog.find(options).sort({_id: -1}).populate('category').populate('author')
-    res.render('main', {categories: allCategories, blogs, user: req.user ? req.user : {}});
-    //
+    const blogs = await Blog.find(options).limit(limit).skip(page * limit).sort({_id: -1}).populate('category').populate('author')
+    res.render('main', {categories: allCategories, blogs, user: req.user ? req.user : {}, pages: Math.ceil(totalBlogs / limit)});
 })
 router.get('/profile/:id', async(req, res) => {
     const blogs = await Blog.find({author: req.params.id}).sort({_id: -1}).populate('category').populate('author')
