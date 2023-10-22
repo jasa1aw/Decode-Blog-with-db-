@@ -15,7 +15,9 @@ router.get('/profile/:id', async(req, res) => {
 })
 router.get('/detailBlog/:id', async(req, res) => {
     const allCategories = await Categories.find();
-    const blog = await Blog.findById(req.params.id).populate('category').populate('author')
+    const blog = await Blog.findById(req.params.id).populate('category').populate('author');
+    blog.views += 1;
+    await blog.save();
     res.render('detailBlog', {blog: blog, categories: allCategories, user: req.user ? req.user : {}});
 })
 router.get('/new', async(req, res) => {

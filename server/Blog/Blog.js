@@ -6,7 +6,9 @@ const BlogSchema = new mongoose.Schema({
     description: String,
     image: String,
     category: {type: Schema.Types.ObjectId, ref: "category"},
-    author: {type: Schema.Types.ObjectId, ref: "user"}
+    author: {type: Schema.Types.ObjectId, ref: "user"},
+    views: {type: Number, default: 0},
+    date: {type: Date, default: Date.now}
 });
 
 module.exports = mongoose.model('blog', BlogSchema)

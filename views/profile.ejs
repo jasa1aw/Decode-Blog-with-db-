@@ -49,11 +49,11 @@
                         <div class="postOverview">
                             <div class="postDate">
                                 <i class="fa-regular fa-calendar" style="color: #676767;"></i>
-                                <span class="date">26.06.2020</span>
+                                <span class="date"><span class="date"><%=`${blog.date.getDate()}.${blog.date.getMonth() + 1}.${blog.date.getFullYear()}` %></span></span>
                             </div>
                             <div class="postViews">
                                 <i class="fa-solid fa-eye" style="color: #676767;"></i>
-                                <span class="views">21</span>
+                                <span class="views"><%= blog.views %></span>
                             </div>
                             <div class="postComments">
                                 <i class="fa-solid fa-comment" style="color: #676767;"></i>
