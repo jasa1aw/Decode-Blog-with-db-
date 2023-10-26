@@ -74,6 +74,9 @@
                     if(locals.category){
                         localString = `category=${locals.category}&`
                     }
+                    if(locals.search){
+                        localString = `search=${locals.search}&`
+                    }
                     for(let i = 0; i < pages; i++){
                 %>
                         <a href="?<%= localString %>page=<%=i%>"><%= i+1 %></a>

@@ -8,12 +8,22 @@ router.get('/', async(req, res) => {
     const options = {};
     const categories = await Categories.findOne({key: req.query.category})
     if(categories){
-        options.category = categories._id
-        res.locals.category = req.query.category
+        options.category = categories._id;
+        res.locals.category = req.query.category;
     }
-    
+    if(req.query.search && req.query.search.length > 0){
+        options.$or = [
+            {
+                title: new RegExp(req.query.search, 'i')
+            },
+            {
+                description: new RegExp(req.query.search, 'i')
+            }
+        ]
+        res.locals.search = req.query.search;
+    }
     let page = 0;
-    const limit = 4;
+    const limit = 3;
     if(req.query.page && req.query.page > 0){
         page = req.query.page
     }
