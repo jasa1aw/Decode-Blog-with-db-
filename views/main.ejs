@@ -70,9 +70,13 @@
             </div>
             <div class="pages">
                 <% 
+                    let localString = ''
+                    if(locals.category){
+                        localString = `category=${locals.category}&`
+                    }
                     for(let i = 0; i < pages; i++){
                 %>
-                        <a href="?page=<%=i%>"><%= i+1 %></a>
+                        <a href="?<%= localString %>page=<%=i%>"><%= i+1 %></a>
                 <% } %>
             </div>
         </div>
