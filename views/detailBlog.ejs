@@ -86,20 +86,35 @@
                             расширять их функциональность и интегрировать в существующие решения.
                         </p>
                     </div> -->
+                    
                     <div class="commentary">
-                        <h2 class="countComment">2 комментария</h2>
-                        <div class="whoComment">
-                            <div class="whoUser">
-                                <img src="/img/avatar.png" alt="avatarUser">
-                                <h2 class="userName">Елнур Сеитжанов</h2>
+                        <% if(totalComments > 0){ %>
+                            <h2 class="countComment"><%= totalComments %> комментария</h2>
+                        <% } %>
+                        <% if(comments){
+                            comments.forEach(comment =>{
+                        %>
+                            <div class="whoComment">
+                                <div class="whoUser">
+                                    <img src="<%= comment.authorId.image %>" alt="avatarUser">
+                                    <h2 class="userName"><%= comment.authorId.full_name %></h2>
+                                    <!-- <img src="/img/avatar.png" alt="avatarUser">
+                                    <h2 class="userName">Елнур Сеитжанов</h2> -->
+                                </div>
+                                <p class="comment"><%= comment.text %></p>
+                                <!-- <p class="comment">В отличие от обычных виджетов пользовательского интерфейса JavaScript, 
+                                    комплексные виджеты - это полноценные приложения, которые не требуют дополнительной настройки и кастомизации.
+                                </p> -->
                             </div>
-                            <p class="comment">В отличие от обычных виджетов пользовательского интерфейса JavaScript, 
-                                комплексные виджеты - это полноценные приложения, которые не требуют дополнительной настройки и кастомизации.
-                            </p>
-                        </div>
+                        <% 
+                                })
+                            } 
+                        %>
                         <% if((user._id && user.full_name.length > 0)){ %>
-                            <form action="" class="writeComment">
-                                <input class="input" type="text" placeholder="Введит текст комментария">
+                            <form class="writeComment" onsubmit="sendComment(event)">
+                                <input type="hidden" value="<%= user._id %>" id="comment-author">
+                                <input type="hidden" value="<%= blog._id %>" id="comment-blog">
+                                <textarea id="comment-text" placeholder="Введит текст комментария"></textarea>
                                 <button type="submit" class="button">Отправить</button>
                             </form>
                         <% }else{ %>

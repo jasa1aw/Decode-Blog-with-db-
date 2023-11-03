@@ -14,6 +14,7 @@ require('./server/config/passport')
 //Configuration
 app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded());
+app.use(express.json());
 app.use(session({
     name: 'decodeBlog.session',
     secret: 'keyboard cat',
@@ -33,6 +34,7 @@ app.use(require('./server/pages/router'));
 app.use(require('./server/Categories/router'));
 app.use(require('./server/auth/router'));
 app.use(require('./server/Blog/router'));
+app.use(require('./server/Comments/router'));
 
 //Connect port
 const PORT = 3000;
