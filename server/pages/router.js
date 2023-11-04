@@ -35,7 +35,7 @@ router.get('/', async(req, res) => {
 })
 router.get('/profile/:id', async(req, res) => {
     const blogs = await Blog.find({author: req.params.id}).sort({_id: -1}).populate('category').populate('author')
-    console.log(blogs);
+    // console.log(blogs);
     res.render('profile', {blogs, user: req.user ? req.user : {}})
 })
 router.get('/detailBlog/:id', async(req, res) => {

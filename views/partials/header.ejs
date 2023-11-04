@@ -9,7 +9,6 @@
         <button class="seacrhBtn button"><i class="fa-solid fa-magnifying-glass"></i></i> Найти</button>
     </form>
     <div class="authBlog">
-        
         <% if(user._id && user.full_name.length > 0) { %>
             <div class="profileBlog">
                 <a href="/profile/<%= user._id %>"><img src="/img/avatar.png" alt="avatarUser"></a>
