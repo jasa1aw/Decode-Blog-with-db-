@@ -92,11 +92,16 @@
                             <h2 class="countComment"><%= totalComments %> комментария</h2>
                         <% } %>
                         <% if(comments){
+                            
                             comments.forEach(comment =>{
+                                console.log(comment + 'comment')
                         %>
                             <div class="whoComment">
                                 <div class="whoUser">
-                                    <img src="<%= comment.authorId.image %>" alt="avatarUser">
+                                    <div class="commentImg">
+                                        <img class="imgCircle" src="/img/avatarBig.png" alt="avatarUser">
+                                    </div>
+                                    
                                     <h2 class="userName"><%= comment.authorId.full_name %></h2>
                                     <!-- <img src="/img/avatar.png" alt="avatarUser">
                                     <h2 class="userName">Елнур Сеитжанов</h2> -->

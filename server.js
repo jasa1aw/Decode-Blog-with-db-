@@ -37,7 +37,7 @@ app.use(require('./server/Blog/router'));
 app.use(require('./server/Comments/router'));
 
 //Connect port
-const PORT = 3000;
+const PORT = 3001;
 app.listen(PORT, () => {
     console.log(`Sever work on port ${PORT}`);
 });

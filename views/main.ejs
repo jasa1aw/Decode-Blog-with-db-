@@ -25,20 +25,7 @@
                             </div>
                         <% } %>
                         <div class="postDescription">
-                            <!-- <h2>Обзор Report Manager от Webix</h2> -->
                             <a href="/detailBlog/<%= blog.id %>"><h2><%= blog.title %></h2></a>
-                            <!-- <p>
-                                Осень 2020 года стала плодотворным временем для специалистов Webix. 
-                            </p>
-                            <p>
-                                Команда Webix выпустила восьмую версию библиотеки пользовательского интерфейса Webix с 
-                                двумя новыми комплексными виджетами. Первый - зто Scheduler, о котором мы подробно говорили ранее. 
-                                Второй виджет - это Gantt chart в JavaScript. Подробную информацию об этом виджете Вы можете найти в статье. 
-                            </p>
-                            <p>
-                                Ноябрь продолжает тенденцию, и мы спешим поделиться с Вами новым комплексным виджетом Report Manager. 
-                                Давайте рассмотрим его подробнее.
-                            </p> -->
                             <p><%= blog.description %></p>
                         </div>
                         <div class="postOverview">
@@ -70,8 +57,13 @@
             </div>
             <div class="pages">
                 <% 
-                    let localString = ''
-                    localString = locals.category ? `category=${locals.category}&` : `search=${locals.search}&`;
+                    let localString = '';
+                    if(locals.category){
+                        localString = `category=${locals.category}&`;
+                    }
+                    if(locals.search){
+                        localString = `search=${locals.search}&`;
+                    }
                     for(let i = 0; i < pages; i++){
                 %>
                         <a href="?<%= localString %>page=<%=i%>"><%= i+1 %></a>
